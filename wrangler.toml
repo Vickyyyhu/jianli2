@@ -1,0 +1,12 @@
+name = "jianli2"
+compatibility_date = "2026-10-22"
+
+# 静态文件构建输出目录
+[assets]
+directory = "./dist"
+
+# 自定义域名绑定
+[[routes]]
+pattern = "xinyue.vickyyyhu.dpdns.org"
+custom_domain = true
+zone_name = "vickyyyhu.dpdns.org"
