@@ -1,0 +1,213 @@
+{
+  "version": "0.4",
+  "title": "联系我 - 胡馨月",
+  "type": "page",
+  "content": [
+    {
+      "id": "contact-hero",
+      "elType": "container",
+      "settings": {
+        "layout": "full_width",
+        "gap": "0px",
+        "padding": { "unit": "px", "top": "140", "right": "24", "bottom": "80", "left": "24" },
+        "background": { "type": "classic", "color": "#FFFFFF" },
+        "flex_direction": "column"
+      },
+      "elements": [
+        {
+          "id": "contact-hero-inner",
+          "elType": "container",
+          "settings": {
+            "layout": "constrained",
+            "content_width": "1200px",
+            "gap": "24px",
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "contact-kicker",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "CONTACT",
+                "size": "xs",
+                "align": "left",
+                "title_color": "#002FA7",
+                "typography": { "font_family": "Inter", "font_size": "13", "font_weight": "500", "letter_spacing": "3", "text_transform": "uppercase" },
+                "header_size": "h4"
+              },
+              "elements": []
+            },
+            {
+              "id": "contact-title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "聊聊，或者直接给个 offer",
+                "size": "xxl",
+                "align": "left",
+                "title_color": "#0A0A0A",
+                "typography": { "font_family": "Inter", "font_size": "56", "font_weight": "700", "letter_spacing": "-1.5", "line_height": "1.1" },
+                "header_size": "h1"
+              },
+              "elements": []
+            },
+            {
+              "id": "contact-desc",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"font-size:17px;color:#666;max-width:600px;line-height:1.7;\">无论是面试邀请、外包合作还是单纯想聊聊设计，都欢迎通过下面的方式联系我。24 小时内回复。</p>",
+                "typography": { "font_family": "Inter", "font_size": "17" }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact-main",
+      "elType": "container",
+      "settings": {
+        "layout": "full_width",
+        "gap": "0px",
+        "padding": { "unit": "px", "top": "40", "right": "24", "bottom": "120", "left": "24" },
+        "background": { "type": "classic", "color": "#FFFFFF" },
+        "flex_direction": "column"
+      },
+      "elements": [
+        {
+          "id": "contact-main-inner",
+          "elType": "container",
+          "settings": {
+            "layout": "constrained",
+            "content_width": "1200px",
+            "gap": "64px",
+            "flex_direction": "row",
+            "flex_wrap": "nowrap",
+            "align_items": "flex-start"
+          },
+          "elements": [
+            {
+              "id": "contact-form-col",
+              "elType": "container",
+              "settings": {
+                "gap": "0px",
+                "width": "65%",
+                "flex_direction": "column"
+              },
+              "elements": [
+                {
+                  "id": "wpforms-contact",
+                  "elType": "widget",
+                  "widgetType": "wpforms",
+                  "settings": {
+                    "form_id": "0",
+                    "title": "你好胡馨月，",
+                    "description": "请填写以下信息，我会尽快回复你。"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "form-note",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p style=\"margin-top:24px;font-size:13px;color:#999;\">提示：表单将使用 WPForms 插件渲染。请在 WPForms 中新建一个 ID 为 1 的「求职联系表单」，字段包括：姓名、邮箱、电话、求职意向（下拉）、留言。然后在此 Elementor 小工具中选择对应表单 ID。</p>",
+                    "typography": { "font_family": "Inter", "font_size": "13" }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "contact-info-col",
+              "elType": "container",
+              "settings": {
+                "gap": "28px",
+                "width": "35%",
+                "flex_direction": "column"
+              },
+              "elements": [
+                {
+                  "id": "info-card-1",
+                  "elType": "widget",
+                  "widgetType": "icon-box",
+                  "settings": {
+                    "title": "电话",
+                    "description": "139 8236 8285",
+                    "icon": { "value": "fas fa-phone" },
+                    "title_color": "#0A0A0A",
+                    "description_color": "#002FA7",
+                    "icon_color": "#FFFFFF",
+                    "icon_background_color": "#002FA7",
+                    "description_link": { "url": "tel:13982368285", "is_external": false },
+                    "box_padding": { "unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24" },
+                    "box_border_color": "#E5E5E5",
+                    "box_border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1" },
+                    "box_border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8" }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "info-card-2",
+                  "elType": "widget",
+                  "widgetType": "icon-box",
+                  "settings": {
+                    "title": "邮箱",
+                    "description": "1697687508@qq.com",
+                    "icon": { "value": "fas fa-envelope" },
+                    "title_color": "#0A0A0A",
+                    "description_color": "#002FA7",
+                    "icon_color": "#FFFFFF",
+                    "icon_background_color": "#002FA7",
+                    "description_link": { "url": "mailto:1697687508@qq.com", "is_external": false },
+                    "box_padding": { "unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24" },
+                    "box_border_color": "#E5E5E5",
+                    "box_border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1" },
+                    "box_border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8" }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "info-card-3",
+                  "elType": "widget",
+                  "widgetType": "icon-box",
+                  "settings": {
+                    "title": "所在地",
+                    "description": "成都 · 可接受远程 / 异地",
+                    "icon": { "value": "fas fa-map-marker-alt" },
+                    "title_color": "#0A0A0A",
+                    "description_color": "#666666",
+                    "icon_color": "#FFFFFF",
+                    "icon_background_color": "#002FA7",
+                    "box_padding": { "unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24" },
+                    "box_border_color": "#E5E5E5",
+                    "box_border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1" },
+                    "box_border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8" }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "social-box",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<div style=\"padding:28px;background:#0A0A0A;border-radius:8px;color:#FFFFFF;\"><div style=\"font-size:13px;color:#888;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase;\">Social</div><div style=\"margin-bottom:14px;\"><a href=\"https://www.zcool.com.cn\" target=\"_blank\" style=\"color:#FFFFFF;text-decoration:none;font-size:15px;\">站酷 ZCOOL →</a></div><div style=\"margin-bottom:14px;\"><a href=\"https://www.xiaohongshu.com\" target=\"_blank\" style=\"color:#FFFFFF;text-decoration:none;font-size:15px;\">小红书 →</a></div><div style=\"margin-bottom:14px;\"><a href=\"https://www.ui.cn\" target=\"_blank\" style=\"color:#FFFFFF;text-decoration:none;font-size:15px;\">UI 中国 →</a></div><div style=\"margin-bottom:14px;\"><a href=\"https://www.behance.net\" target=\"_blank\" style=\"color:#FFFFFF;text-decoration:none;font-size:15px;\">Behance →</a></div><div><span style=\"color:#FFFFFF;font-size:15px;\">微信：huxinyue_design</span></div></div>",
+                    "typography": { "font_family": "Inter", "font_size": "15" }
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {
+    "hide_title": "yes",
+    "template": "elementor_canvas"
+  }
+}

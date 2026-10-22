@@ -1,0 +1,236 @@
+{
+  "version": "0.4",
+  "title": "作品集 - 胡馨月",
+  "type": "page",
+  "content": [
+    {
+      "id": "port-hero",
+      "elType": "container",
+      "settings": {
+        "layout": "full_width",
+        "gap": "0px",
+        "padding": { "unit": "px", "top": "140", "right": "24", "bottom": "60", "left": "24" },
+        "background": { "type": "classic", "color": "#FFFFFF" },
+        "flex_direction": "column"
+      },
+      "elements": [
+        {
+          "id": "port-hero-inner",
+          "elType": "container",
+          "settings": {
+            "layout": "constrained",
+            "content_width": "1200px",
+            "gap": "24px",
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "port-kicker",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "PORTFOLIO",
+                "size": "xs",
+                "align": "left",
+                "title_color": "#002FA7",
+                "typography": { "font_family": "Inter", "font_size": "13", "font_weight": "500", "letter_spacing": "3", "text_transform": "uppercase" },
+                "header_size": "h4"
+              },
+              "elements": []
+            },
+            {
+              "id": "port-title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "精选作品集",
+                "size": "xxl",
+                "align": "left",
+                "title_color": "#0A0A0A",
+                "typography": { "font_family": "Inter", "font_size": "56", "font_weight": "700", "letter_spacing": "-1.5", "line_height": "1.1" },
+                "header_size": "h1"
+              },
+              "elements": []
+            },
+            {
+              "id": "port-desc",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"font-size:17px;color:#666;max-width:640px;line-height:1.7;\">以下是我近两年的代表性项目，覆盖品牌视觉、UI 交互、平面海报与三维动效。点击卡片或站酷链接查看完整作品。</p>",
+                "typography": { "font_family": "Inter", "font_size": "17" }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "port-filter-section",
+      "elType": "container",
+      "settings": {
+        "layout": "full_width",
+        "gap": "0px",
+        "padding": { "unit": "px", "top": "20", "right": "24", "bottom": "40", "left": "24" },
+        "flex_direction": "column"
+      },
+      "elements": [
+        {
+          "id": "port-filter-inner",
+          "elType": "container",
+          "settings": {
+            "layout": "constrained",
+            "content_width": "1200px",
+            "gap": "12px",
+            "flex_direction": "row",
+            "flex_wrap": "wrap",
+            "align_items": "center"
+          },
+          "elements": [
+            { "id": "f-all", "elType": "widget", "widgetType": "button", "settings": { "text": "全部", "button_size": "sm", "background_color": "#002FA7", "text_color": "#FFFFFF", "border_radius": { "unit": "px", "top": "999", "right": "999", "bottom": "999", "left": "999" }, "padding": { "unit": "px", "top": "8", "right": "20", "bottom": "8", "left": "20" }, "typography": { "font_family": "Inter", "font_size": "14", "font_weight": "500" } }, "elements": [] },
+            { "id": "f-brand", "elType": "widget", "widgetType": "button", "settings": { "text": "品牌视觉", "button_size": "sm", "background_color": "rgba(0,0,0,0)", "text_color": "#0A0A0A", "border_color": "#E5E5E5", "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1" }, "border_radius": { "unit": "px", "top": "999", "right": "999", "bottom": "999", "left": "999" }, "padding": { "unit": "px", "top": "8", "right": "20", "bottom": "8", "left": "20" }, "typography": { "font_family": "Inter", "font_size": "14", "font_weight": "500" } }, "elements": [] },
+            { "id": "f-ui", "elType": "widget", "widgetType": "button", "settings": { "text": "UI / UX", "button_size": "sm", "background_color": "rgba(0,0,0,0)", "text_color": "#0A0A0A", "border_color": "#E5E5E5", "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1" }, "border_radius": { "unit": "px", "top": "999", "right": "999", "bottom": "999", "left": "999" }, "padding": { "unit": "px", "top": "8", "right": "20", "bottom": "8", "left": "20" }, "typography": { "font_family": "Inter", "font_size": "14", "font_weight": "500" } }, "elements": [] },
+            { "id": "f-poster", "elType": "widget", "widgetType": "button", "settings": { "text": "平面海报", "button_size": "sm", "background_color": "rgba(0,0,0,0)", "text_color": "#0A0A0A", "border_color": "#E5E5E5", "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1" }, "border_radius": { "unit": "px", "top": "999", "right": "999", "bottom": "999", "left": "999" }, "padding": { "unit": "px", "top": "8", "right": "20", "bottom": "8", "left": "20" }, "typography": { "font_family": "Inter", "font_size": "14", "font_weight": "500" } }, "elements": [] },
+            { "id": "f-motion", "elType": "widget", "widgetType": "button", "settings": { "text": "动态 / 三维", "button_size": "sm", "background_color": "rgba(0,0,0,0)", "text_color": "#0A0A0A", "border_color": "#E5E5E5", "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1" }, "border_radius": { "unit": "px", "top": "999", "right": "999", "bottom": "999", "left": "999" }, "padding": { "unit": "px", "top": "8", "right": "20", "bottom": "8", "left": "20" }, "typography": { "font_family": "Inter", "font_size": "14", "font_weight": "500" } }, "elements": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "port-grid-section",
+      "elType": "container",
+      "settings": {
+        "layout": "full_width",
+        "gap": "0px",
+        "padding": { "unit": "px", "top": "20", "right": "24", "bottom": "120", "left": "24" },
+        "background": { "type": "classic", "color": "#FFFFFF" },
+        "flex_direction": "column"
+      },
+      "elements": [
+        {
+          "id": "port-grid-inner",
+          "elType": "container",
+          "settings": {
+            "layout": "constrained",
+            "content_width": "1200px",
+            "gap": "32px",
+            "grid_columns": 3,
+            "grid_rows": "auto",
+            "layout_fallback": "grid",
+            "grid_column_gap": "32px",
+            "grid_row_gap": "32px"
+          },
+          "elements": [
+            {
+              "id": "proj-1",
+              "elType": "widget",
+              "widgetType": "image-box",
+              "settings": {
+                "title": "茶叙 · 品牌视觉系统",
+                "description": "<span style=\"color:#002FA7;font-size:12px;font-weight:600;margin-right:10px;\">品牌视觉</span><span style=\"color:#999;font-size:12px;\">2024</span><p style=\"margin:12px 0 0;font-size:14px;color:#333;\">四川职业技能大赛三等奖作品，为新式茶饮品牌设计的完整 VI 系统。</p>",
+                "image": { "url": "https://via.placeholder.com/600x400/002FA7/FFFFFF?text=茶叙+Brand", "id": 0 },
+                "image_size": "full",
+                "title_color": "#0A0A0A",
+                "box_background_color": "#FFFFFF",
+                "box_border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8" },
+                "link": { "url": "https://www.zcool.com.cn", "is_external": true },
+                "button_text": "查看详情 →"
+              },
+              "elements": []
+            },
+            {
+              "id": "proj-2",
+              "elType": "widget",
+              "widgetType": "image-box",
+              "settings": {
+                "title": "城市脉搏 · 动态海报",
+                "description": "<span style=\"color:#002FA7;font-size:12px;font-weight:600;margin-right:10px;\">动态 / 三维</span><span style=\"color:#999;font-size:12px;\">2025</span><p style=\"margin:12px 0 0;font-size:14px;color:#333;\">华迪杯三等奖作品，AE + Blender 制作的城市主题动态海报。</p>",
+                "image": { "url": "https://via.placeholder.com/600x400/0A0A0A/FFFFFF?text=城市脉搏", "id": 0 },
+                "image_size": "full",
+                "title_color": "#0A0A0A",
+                "box_background_color": "#FFFFFF",
+                "box_border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8" },
+                "link": { "url": "https://www.zcool.com.cn", "is_external": true },
+                "button_text": "查看详情 →"
+              },
+              "elements": []
+            },
+            {
+              "id": "proj-3",
+              "elType": "widget",
+              "widgetType": "image-box",
+              "settings": {
+                "title": "智慧停车 · APP UI 设计",
+                "description": "<span style=\"color:#002FA7;font-size:12px;font-weight:600;margin-right:10px;\">UI / UX</span><span style=\"color:#999;font-size:12px;\">2024</span><p style=\"margin:12px 0 0;font-size:14px;color:#333;\">校园外包项目，为本地停车服务商设计的完整 APP UI 与交互原型。</p>",
+                "image": { "url": "https://via.placeholder.com/600x400/FAFAFA/002FA7?text=Smart+Parking", "id": 0 },
+                "image_size": "full",
+                "title_color": "#0A0A0A",
+                "box_background_color": "#FFFFFF",
+                "box_border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8" },
+                "link": { "url": "https://www.zcool.com.cn", "is_external": true },
+                "button_text": "查看详情 →"
+              },
+              "elements": []
+            },
+            {
+              "id": "proj-4",
+              "elType": "widget",
+              "widgetType": "image-box",
+              "settings": {
+                "title": "城市书店 · 系列海报",
+                "description": "<span style=\"color:#002FA7;font-size:12px;font-weight:600;margin-right:10px;\">平面海报</span><span style=\"color:#999;font-size:12px;\">2024</span><p style=\"margin:12px 0 0;font-size:14px;color:#333;\">为独立书店设计的五张系列海报，主打阅读与城市情绪共鸣。</p>",
+                "image": { "url": "https://via.placeholder.com/600x400/E5E5E5/0A0A0A?text=City+Bookstore", "id": 0 },
+                "image_size": "full",
+                "title_color": "#0A0A0A",
+                "box_background_color": "#FFFFFF",
+                "box_border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8" },
+                "link": { "url": "https://www.zcool.com.cn", "is_external": true },
+                "button_text": "查看详情 →"
+              },
+              "elements": []
+            },
+            {
+              "id": "proj-5",
+              "elType": "widget",
+              "widgetType": "image-box",
+              "settings": {
+                "title": "咖啡品牌 · 包装设计",
+                "description": "<span style=\"color:#002FA7;font-size:12px;font-weight:600;margin-right:10px;\">品牌视觉</span><span style=\"color:#999;font-size:12px;\">2025</span><p style=\"margin:12px 0 0;font-size:14px;color:#333;\">为小众精品咖啡品牌设计的整套包装与周边物料。</p>",
+                "image": { "url": "https://via.placeholder.com/600x400/FFFFFF/002FA7?text=Coffee+Packaging", "id": 0 },
+                "image_size": "full",
+                "title_color": "#0A0A0A",
+                "box_background_color": "#FFFFFF",
+                "box_border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8" },
+                "link": { "url": "https://www.zcool.com.cn", "is_external": true },
+                "button_text": "查看详情 →"
+              },
+              "elements": []
+            },
+            {
+              "id": "proj-6",
+              "elType": "widget",
+              "widgetType": "image-box",
+              "settings": {
+                "title": "公益项目 · 小程序 UI",
+                "description": "<span style=\"color:#002FA7;font-size:12px;font-weight:600;margin-right:10px;\">UI / UX</span><span style=\"color:#999;font-size:12px;\">2025</span><p style=\"margin:12px 0 0;font-size:14px;color:#333;\">为本地流浪动物救助站设计的领养小程序界面。</p>",
+                "image": { "url": "https://via.placeholder.com/600x400/002FA7/FFFFFF?text=Adopt+Me", "id": 0 },
+                "image_size": "full",
+                "title_color": "#0A0A0A",
+                "box_background_color": "#FFFFFF",
+                "box_border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8" },
+                "link": { "url": "https://www.zcool.com.cn", "is_external": true },
+                "button_text": "查看详情 →"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {
+    "hide_title": "yes",
+    "template": "elementor_canvas"
+  }
+}

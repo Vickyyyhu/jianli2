@@ -1,0 +1,172 @@
+{
+  "version": "0.4",
+  "title": "Footer - 胡馨月 作品集",
+  "type": "footer",
+  "content": [
+    {
+      "id": "footer-root",
+      "elType": "container",
+      "settings": {
+        "layout": "full_width",
+        "gap": "0px",
+        "padding": { "unit": "px", "top": "100", "right": "24", "bottom": "32", "left": "24" },
+        "background": { "type": "classic", "color": "#0A0A0A" },
+        "flex_direction": "column"
+      },
+      "elements": [
+        {
+          "id": "footer-top",
+          "elType": "container",
+          "settings": {
+            "layout": "constrained",
+            "content_width": "1200px",
+            "gap": "80px",
+            "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "64", "left": "0" },
+            "border_bottom": { "unit": "px", "size": "1", "color": "#222222" },
+            "flex_direction": "row",
+            "flex_wrap": "nowrap"
+          },
+          "elements": [
+            {
+              "id": "footer-brand",
+              "elType": "container",
+              "settings": {
+                "gap": "20px",
+                "width": "40%",
+                "flex_direction": "column"
+              },
+              "elements": [
+                {
+                  "id": "footer-logo",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "<strong style=\"color:#FFFFFF;\">胡馨月</strong> <span style=\"color:#666;font-weight:300;\">· Designer</span>",
+                    "size": "s",
+                    "align": "left",
+                    "typography": { "font_family": "Inter", "font_size": "22", "font_weight": "600" },
+                    "header_size": "h3"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "footer-desc",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p style=\"color:#888;font-size:14px;line-height:1.7;max-width:420px;\">应届视觉传达设计师。专注品牌视觉、UI/UX、平面与三维动效。<br/>用视觉连接创意与商业。</p>",
+                    "typography": { "font_family": "Inter", "font_size": "14" }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "footer-cta",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "立即联系 →",
+                    "link": { "url": "/contact", "is_external": false },
+                    "button_size": "sm",
+                    "background_color": "#002FA7",
+                    "text_color": "#FFFFFF",
+                    "border_radius": { "unit": "px", "top": "4", "right": "4", "bottom": "4", "left": "4" },
+                    "padding": { "unit": "px", "top": "10", "right": "24", "bottom": "10", "left": "24" },
+                    "align": "left",
+                    "typography": { "font_family": "Inter", "font_size": "14", "font_weight": "600" }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "footer-links",
+              "elType": "container",
+              "settings": {
+                "gap": "60px",
+                "width": "60%",
+                "flex_direction": "row",
+                "flex_wrap": "nowrap",
+                "justify_content": "flex_end"
+              },
+              "elements": [
+                {
+                  "id": "col-1",
+                  "elType": "container",
+                  "settings": { "gap": "12px", "flex_direction": "column" },
+                  "elements": [
+                    { "id": "col1-title", "elType": "widget", "widgetType": "heading", "settings": { "title": "快速导航", "size": "xs", "title_color": "#FFFFFF", "typography": { "font_family": "Inter", "font_size": "13", "font_weight": "600", "letter_spacing": "1" }, "header_size": "h5" }, "elements": [] },
+                    { "id": "col1-l1", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<a href=\"/\" style=\"color:#888;text-decoration:none;font-size:14px;\">首页</a>", "typography": { "font_family": "Inter", "font_size": "14" } }, "elements": [] },
+                    { "id": "col1-l2", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<a href=\"/about\" style=\"color:#888;text-decoration:none;font-size:14px;\">关于与简历</a>", "typography": { "font_family": "Inter", "font_size": "14" } }, "elements": [] },
+                    { "id": "col1-l3", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<a href=\"/portfolio\" style=\"color:#888;text-decoration:none;font-size:14px;\">作品集</a>", "typography": { "font_family": "Inter", "font_size": "14" } }, "elements": [] },
+                    { "id": "col1-l4", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<a href=\"/blog\" style=\"color:#888;text-decoration:none;font-size:14px;\">博客</a>", "typography": { "font_family": "Inter", "font_size": "14" } }, "elements": [] },
+                    { "id": "col1-l5", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<a href=\"/contact\" style=\"color:#888;text-decoration:none;font-size:14px;\">联系我</a>", "typography": { "font_family": "Inter", "font_size": "14" } }, "elements": [] }
+                  ]
+                },
+                {
+                  "id": "col-2",
+                  "elType": "container",
+                  "settings": { "gap": "12px", "flex_direction": "column" },
+                  "elements": [
+                    { "id": "col2-title", "elType": "widget", "widgetType": "heading", "settings": { "title": "社交媒体", "size": "xs", "title_color": "#FFFFFF", "typography": { "font_family": "Inter", "font_size": "13", "font_weight": "600", "letter_spacing": "1" }, "header_size": "h5" }, "elements": [] },
+                    { "id": "col2-l1", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<a href=\"https://www.zcool.com.cn\" target=\"_blank\" style=\"color:#888;text-decoration:none;font-size:14px;\">站酷 ZCOOL</a>", "typography": { "font_family": "Inter", "font_size": "14" } }, "elements": [] },
+                    { "id": "col2-l2", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<a href=\"https://www.xiaohongshu.com\" target=\"_blank\" style=\"color:#888;text-decoration:none;font-size:14px;\">小红书</a>", "typography": { "font_family": "Inter", "font_size": "14" } }, "elements": [] },
+                    { "id": "col2-l3", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<a href=\"https://www.ui.cn\" target=\"_blank\" style=\"color:#888;text-decoration:none;font-size:14px;\">UI 中国</a>", "typography": { "font_family": "Inter", "font_size": "14" } }, "elements": [] },
+                    { "id": "col2-l4", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<a href=\"https://www.behance.net\" target=\"_blank\" style=\"color:#888;text-decoration:none;font-size:14px;\">Behance</a>", "typography": { "font_family": "Inter", "font_size": "14" } }, "elements": [] }
+                  ]
+                },
+                {
+                  "id": "col-3",
+                  "elType": "container",
+                  "settings": { "gap": "12px", "flex_direction": "column" },
+                  "elements": [
+                    { "id": "col3-title", "elType": "widget", "widgetType": "heading", "settings": { "title": "直接联系", "size": "xs", "title_color": "#FFFFFF", "typography": { "font_family": "Inter", "font_size": "13", "font_weight": "600", "letter_spacing": "1" }, "header_size": "h5" }, "elements": [] },
+                    { "id": "col3-l1", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<span style=\"color:#888;font-size:14px;\">📞 139 8236 8285</span>", "typography": { "font_family": "Inter", "font_size": "14" } }, "elements": [] },
+                    { "id": "col3-l2", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<span style=\"color:#888;font-size:14px;\">✉️ 1697687508@qq.com</span>", "typography": { "font_family": "Inter", "font_size": "14" } }, "elements": [] },
+                    { "id": "col3-l3", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<span style=\"color:#888;font-size:14px;\">📍 成都，中国</span>", "typography": { "font_family": "Inter", "font_size": "14" } }, "elements": [] }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "footer-bottom",
+          "elType": "container",
+          "settings": {
+            "layout": "constrained",
+            "content_width": "1200px",
+            "gap": "0px",
+            "padding": { "unit": "px", "top": "24", "right": "0", "bottom": "0", "left": "0" },
+            "flex_direction": "row",
+            "flex_wrap": "nowrap",
+            "justify_content": "space_between",
+            "align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "copyright",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<span style=\"color:#666;font-size:13px;\">© 2025 胡馨月. All rights reserved.</span>",
+                "typography": { "font_family": "Inter", "font_size": "13" }
+              },
+              "elements": []
+            },
+            {
+              "id": "seo-tags",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<span style=\"color:#444;font-size:12px;\">#视觉传达设计师 #UI设计 #平面设计 #胡馨月作品集</span>",
+                "typography": { "font_family": "Inter", "font_size": "12" }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {}
+}
