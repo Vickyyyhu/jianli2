@@ -1,0 +1,49 @@
+{
+  "form_title": "求职联系表单",
+  "form_description": "用于接收面试邀请与合作咨询",
+  "fields": [
+    {
+      "type": "name",
+      "label": "姓名",
+      "required": true,
+      "placeholder": "请输入你的姓名"
+    },
+    {
+      "type": "email",
+      "label": "邮箱",
+      "required": true,
+      "placeholder": "your@email.com"
+    },
+    {
+      "type": "phone",
+      "label": "电话",
+      "required": false,
+      "placeholder": "你的联系电话"
+    },
+    {
+      "type": "select",
+      "label": "求职意向",
+      "required": true,
+      "choices": [
+        "全职岗位邀请",
+        "实习岗位邀请",
+        "外包 / 项目合作",
+        "单纯聊聊设计"
+      ],
+      "placeholder": "请选择"
+    },
+    {
+      "type": "textarea",
+      "label": "留言",
+      "required": true,
+      "placeholder": "简单介绍一下你的公司、岗位需求或合作意向……"
+    }
+  ],
+  "settings": {
+    "confirmation_type": "message",
+    "confirmation_message": "谢谢你的留言！我会在 24 小时内回复你。",
+    "notification_email": "1697687508@qq.com",
+    "notification_subject": "【新留言】来自 xiao.cn 联系表单",
+    "submit_button_text": "发送留言"
+  }
+}
