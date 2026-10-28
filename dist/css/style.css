@@ -294,6 +294,159 @@ h3 {
   opacity: 0.3;
   filter: blur(20px);
 }
+
+/* ============== Hero Carousel ============== */
+.hero-carousel {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.hero-carousel::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 36px;
+  background: var(--grad-purple);
+  z-index: -1;
+  opacity: 0.3;
+  filter: blur(20px);
+}
+.hero-carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hero-carousel-slide {
+  position: absolute;
+  inset: 0;
+  display: block;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s var(--ease), transform 0.7s var(--ease);
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 32px;
+}
+.hero-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s var(--ease);
+}
+.hero-carousel-slide.active {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 2;
+}
+.hero-carousel-slide.active img { transform: scale(1.04); }
+.hero-carousel-slide:hover img { transform: scale(1.08); }
+
+.hero-carousel-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 60px 32px 28px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.72) 100%);
+  color: var(--white);
+  z-index: 3;
+  transition: var(--transition);
+}
+.hero-carousel-label .kicker { margin-bottom: 8px; }
+.hero-carousel-label h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.5px;
+}
+.hero-carousel-slide:hover .hero-carousel-label {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%);
+}
+
+/* 右侧控制区：垂直圆点 + 上下箭头 */
+.hero-carousel-controls {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  z-index: 10;
+  padding: 14px 8px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.hc-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--text);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  line-height: 1;
+}
+.hc-arrow:hover {
+  background: var(--grad-purple);
+  color: var(--white);
+  transform: scale(1.1);
+}
+.hc-dots {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 6px 0;
+}
+.hc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gray-400);
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  padding: 0;
+}
+.hc-dot:hover { background: var(--accent-purple); }
+.hc-dot.active {
+  background: var(--accent-purple);
+  width: 18px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 3px rgba(161,140,209,0.25);
+}
+
+/* 底部进度条 */
+.hero-carousel-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.2);
+  z-index: 10;
+  border-radius: 0 0 32px 32px;
+  overflow: hidden;
+}
+.hero-carousel-progress span {
+  display: block;
+  height: 100%;
+  background: var(--grad-peach);
+  width: 0;
+  transition: width 0.1s linear;
+}
+.hero-carousel.paused .hero-carousel-progress span {
+  transition: none;
+}
 .hero-meta {
   display: flex;
   gap: 56px;
@@ -858,7 +1011,10 @@ h3 {
   .contact-main { grid-template-columns: 1fr; gap: 56px; }
   .featured-post { grid-template-columns: 1fr; padding: 40px; }
   .hero .container { grid-template-columns: 1fr; gap: 56px; }
-  .hero-right-img { max-width: 400px; margin: 0 auto; }
+  .hero-right-img, .hero-carousel { max-width: 400px; margin: 0 auto; }
+  .hero-carousel-controls { right: 12px; padding: 10px 6px; gap: 10px; }
+  .hc-arrow { width: 24px; height: 24px; font-size: 11px; }
+  .hc-dots { gap: 6px; }
   .adv-grid { grid-template-columns: repeat(2, 1fr); }
   .projects-grid, .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .tools-grid { grid-template-columns: repeat(2, 1fr); }

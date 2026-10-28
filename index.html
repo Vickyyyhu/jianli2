@@ -60,8 +60,45 @@
         </div>
       </div>
     </div>
-    <div class="hero-right-img reveal">
-      <img src="assets/work/TownAdventure.png" alt="Town Adventure 3D 场景作品" style="width:100%;height:100%;object-fit:cover;">
+    <!-- Hero Carousel - 配置位置：改下面每个 slide 的 data-link 和 img src -->
+    <div class="hero-carousel reveal" id="heroCarousel" data-autoplay="4000">
+      <div class="hero-carousel-track">
+        <!-- Slide 1: 作品集 -->
+        <a class="hero-carousel-slide" href="portfolio.html"
+           data-link="portfolio.html">
+          <img src="assets/work/无法逃离1.png" alt="无法逃离 三维游戏 → 作品集">
+          <div class="hero-carousel-label">
+            <span class="kicker" style="background:rgba(255,255,255,0.9);">作品集</span>
+            <h4>三维游戏作品</h4>
+          </div>
+        </a>
+        <!-- Slide 2: 关于我 -->
+        <a class="hero-carousel-slide" href="about.html"
+           data-link="about.html">
+          <img src="assets/work/blender小狐狸.png" alt="Blender 小狐狸 → 关于我">
+          <div class="hero-carousel-label">
+            <span class="kicker" style="background:rgba(255,255,255,0.9);">关于我</span>
+            <h4>技能与经历</h4>
+          </div>
+        </a>
+        <!-- Slide 3: 博客 -->
+        <a class="hero-carousel-slide" href="blog.html"
+           data-link="blog.html">
+          <img src="assets/work/特效.png" alt="特效作品 → 博客">
+          <div class="hero-carousel-label">
+            <span class="kicker" style="background:rgba(255,255,255,0.9);">博客</span>
+            <h4>设计随笔</h4>
+          </div>
+        </a>
+      </div>
+      <!-- 右侧指示器（垂直小圆点 + 上下箭头） -->
+      <div class="hero-carousel-controls">
+        <button class="hc-arrow hc-prev" aria-label="上一张">↑</button>
+        <div class="hc-dots"></div>
+        <button class="hc-arrow hc-next" aria-label="下一张">↓</button>
+      </div>
+      <!-- 进度条 -->
+      <div class="hero-carousel-progress"><span></span></div>
     </div>
   </div>
 </section>

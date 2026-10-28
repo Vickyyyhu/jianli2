@@ -106,6 +106,78 @@
     io.observe(el);
   });
 
+  // ============ Hero Carousel 轮播 ============
+  document.querySelectorAll('#heroCarousel').forEach(carousel => {
+    const slides = carousel.querySelectorAll('.hero-carousel-slide');
+    const dotsContainer = carousel.querySelector('.hc-dots');
+    const progress = carousel.querySelector('.hero-carousel-progress span');
+    const autoplayMs = parseInt(carousel.dataset.autoplay, 10) || 4000;
+    let current = 0;
+    let rafId = null;
+    let startTime = 0;
+    let paused = false;
+
+    // 生成圆点指示器
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'hc-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `跳转到第 ${i + 1} 张`);
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+    const dots = dotsContainer.querySelectorAll('.hc-dot');
+
+    // 按钮
+    carousel.querySelector('.hc-prev').addEventListener('click', () => goTo(current - 1));
+    carousel.querySelector('.hc-next').addEventListener('click', () => goTo(current + 1));
+
+    function goTo(index) {
+      index = (index + slides.length) % slides.length;
+      if (index === current) return;
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = index;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      startTime = performance.now(); // 重置进度
+    }
+
+    function tick(now) {
+      if (!paused) {
+        const elapsed = now - startTime;
+        const pct = Math.min(100, (elapsed / autoplayMs) * 100);
+        progress.style.width = pct + '%';
+        if (elapsed >= autoplayMs) {
+          goTo(current + 1);
+        }
+      }
+      rafId = requestAnimationFrame(tick);
+    }
+
+    // 启动
+    slides[current].classList.add('active');
+    startTime = performance.now();
+    rafId = requestAnimationFrame(tick);
+
+    // 鼠标悬停暂停
+    carousel.addEventListener('mouseenter', () => {
+      paused = true;
+      carousel.classList.add('paused');
+    });
+    carousel.addEventListener('mouseleave', () => {
+      paused = false;
+      carousel.classList.remove('paused');
+      startTime = performance.now() - (parseFloat(progress.style.width || '0') / 100) * autoplayMs;
+    });
+
+    // 键盘左右控制
+    carousel.addEventListener('keydown', e => {
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); goTo(current - 1); }
+      else if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
+    });
+    carousel.setAttribute('tabindex', '0');
+  });
+
   // ============ Lightbox 画廊翻阅 ============
   let lb = null, lbIndex = 0, lbImages = [], lbTitle = '';
 
