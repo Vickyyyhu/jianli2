@@ -13,7 +13,6 @@
 </head>
 <body>
 
-<!-- Header -->
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo">胡馨月<span> · Designer</span></a>
@@ -30,11 +29,8 @@
     </button>
   </div>
   <nav class="mobile-nav">
-    <a href="index.html">首页</a>
-    <a href="about.html">关于与简历</a>
-    <a href="portfolio.html">作品集</a>
-    <a href="blog.html">博客</a>
-    <a href="contact.html">联系我</a>
+    <a href="index.html">首页</a><a href="about.html">关于与简历</a>
+    <a href="portfolio.html">作品集</a><a href="blog.html">博客</a><a href="contact.html">联系我</a>
   </nav>
 </header>
 
@@ -65,7 +61,7 @@
       </div>
     </div>
     <div class="hero-right-img reveal">
-      <img src="https://images.unsplash.com/photo-1561070791-2526d30994b8?w=900&q=80" alt="视觉设计创意作品" style="width:100%;height:100%;object-fit:cover;">
+      <img src="assets/work/TownAdventure.png" alt="Town Adventure 3D 场景作品" style="width:100%;height:100%;object-fit:cover;">
     </div>
   </div>
 </section>
@@ -85,7 +81,7 @@
       <div class="tool-card reveal"><h4>Blender</h4><p>三维建模基础</p></div>
       <div class="tool-card reveal"><h4>After Effects</h4><p>动态海报</p></div>
       <div class="tool-card reveal"><h4>Office</h4><p>办公协作</p></div>
-      <div class="tool-card reveal"><h4>持续学习</h4><p>新软件 · 新方法</p></div>
+      <div class="tool-card reveal"><h4>Unity / UE5</h4><p>游戏 / 场景</p></div>
     </div>
   </div>
 </section>
@@ -101,25 +97,40 @@
       <a href="portfolio.html" class="btn btn-outline btn-sm">查看全部 →</a>
     </div>
     <div class="bento-grid">
-      <a href="portfolio.html" class="bento-item bento-1 reveal">
-        <img src="https://images.unsplash.com/photo-1561070791-36c11767b26a?w=800&q=80" alt="品牌视觉" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:28px;">
-        <div><div class="bento-label">茶叙 · 品牌视觉</div><div class="bento-tag">VI · 2024</div></div>
+      <!-- 无法逃离 (3张) - 大图 -->
+      <a href="#" class="bento-item bento-1 reveal"
+         data-gallery='["assets/work/无法逃离1.png","assets/work/无法逃离2.png","assets/work/无法逃离3.png"]'
+         data-title="无法逃离">
+        <img src="assets/work/无法逃离1.png" alt="无法逃离">
+        <div><div class="bento-label">无法逃离</div><div class="bento-tag">品牌 / 平面 · 2024 · 3 张</div></div>
       </a>
-      <a href="portfolio.html" class="bento-item bento-2 reveal">
-        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&q=80" alt="UI设计" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:28px;">
-        <div><div class="bento-label">智慧停车 · APP UI</div><div class="bento-tag">UI/UX · 2024</div></div>
+      <!-- TownAdventure (2张) -->
+      <a href="#" class="bento-item bento-2 reveal"
+         data-gallery='["assets/work/TownAdventure.png","assets/work/LevelSequence.0047.png"]'
+         data-title="Town Adventure">
+        <img src="assets/work/TownAdventure.png" alt="Town Adventure">
+        <div><div class="bento-label">Town Adventure</div><div class="bento-tag">UE5 场景 · 2 张</div></div>
       </a>
-      <a href="portfolio.html" class="bento-item bento-3 reveal">
-        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&q=80" alt="平面海报" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:28px;">
-        <div><div class="bento-label">城市书店 · 系列海报</div><div class="bento-tag">平面 · 2024</div></div>
+      <!-- 2D闯关小游戏 (2张) -->
+      <a href="#" class="bento-item bento-3 reveal"
+         data-gallery='["assets/work/2D闯关小游戏1.png","assets/work/2D闯关小游戏2.png"]'
+         data-title="2D闯关小游戏">
+        <img src="assets/work/2D闯关小游戏1.png" alt="2D闯关小游戏">
+        <div><div class="bento-label">2D 闯关小游戏</div><div class="bento-tag">Unity · 2 张</div></div>
       </a>
-      <a href="portfolio.html" class="bento-item bento-4 reveal">
-        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&q=80" alt="动态海报" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:28px;">
-        <div><div class="bento-label">城市脉搏 · 动态海报</div><div class="bento-tag">动效 · 2025</div></div>
+      <!-- 樊楼 -->
+      <a href="#" class="bento-item bento-4 reveal"
+         data-gallery='["assets/work/樊楼.png"]'
+         data-title="樊楼">
+        <img src="assets/work/樊楼.png" alt="樊楼">
+        <div><div class="bento-label">樊楼</div><div class="bento-tag">品牌视觉</div></div>
       </a>
-      <a href="portfolio.html" class="bento-item bento-5 reveal">
-        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80" alt="包装设计" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:28px;">
-        <div><div class="bento-label">咖啡品牌 · 包装</div><div class="bento-tag">品牌 · 2025</div></div>
+      <!-- 特效 -->
+      <a href="#" class="bento-item bento-5 reveal"
+         data-gallery='["assets/work/特效.png"]'
+         data-title="特效">
+        <img src="assets/work/特效.png" alt="特效">
+        <div><div class="bento-label">特效</div><div class="bento-tag">三维 / 动效</div></div>
       </a>
     </div>
   </div>

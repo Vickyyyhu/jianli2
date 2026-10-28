@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>胡馨月作品集 · 品牌 / UI / 平面 / 动态</title>
-<meta name="description" content="胡馨月的精选项目作品，覆盖品牌视觉、UI/UX、平面海报与三维动效。">
-<meta name="keywords" content="胡馨月作品集,UI设计">
+<title>胡馨月作品集 · 2D闯关 / 无法逃离 / TownAdventure / 樊楼 / 特效 / 网页</title>
+<meta name="description" content="胡馨月的 6 组真实作品截图：2D闯关小游戏、无法逃离、TownAdventure、樊楼、特效、网页。同系列可点击翻阅。">
+<meta name="keywords" content="胡馨月作品集">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
   <div class="container">
     <div class="kicker">PORTFOLIO</div>
     <h1>精选<span class="highlight-gradient">作品集</span></h1>
-    <p class="lead" style="margin-top:20px;">近两年的代表性项目，覆盖品牌视觉、UI 交互、平面海报与三维动效。点击卡片或站酷链接查看完整作品。</p>
+    <p class="lead" style="margin-top:20px;">点击项目卡可放大查看，同系列作品支持左右翻阅。图片尺寸已统一裁切展示。</p>
   </div>
 </section>
 
@@ -46,10 +46,9 @@
   <div class="container">
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all">全部</button>
-      <button class="filter-btn" data-filter="brand">品牌视觉</button>
-      <button class="filter-btn" data-filter="ui">UI / UX</button>
-      <button class="filter-btn" data-filter="poster">平面海报</button>
-      <button class="filter-btn" data-filter="motion">动态 / 三维</button>
+      <button class="filter-btn" data-filter="ui">游戏 / UI</button>
+      <button class="filter-btn" data-filter="brand">品牌 / 平面</button>
+      <button class="filter-btn" data-filter="motion">三维 / 动效</button>
     </div>
   </div>
 </section>
@@ -58,57 +57,93 @@
   <div class="container">
     <div class="projects-grid">
 
-      <a href="https://www.zcool.com.cn" target="_blank" class="project-card reveal" data-category="brand">
-        <div class="project-thumb"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=700&q=80" alt="茶叙品牌"></div>
+      <!-- 项目 1: 2D闯关小游戏 (2张) -->
+      <a href="#" class="project-card reveal" data-category="ui"
+         data-gallery='["assets/work/2D闯关小游戏1.png","assets/work/2D闯关小游戏2.png"]'
+         data-title="2D闯关小游戏">
+        <div class="project-thumb">
+          <img src="assets/work/2D闯关小游戏1.png" alt="2D闯关小游戏 主图">
+          <span class="series-count" style="top:14px;right:14px;">2 张</span>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">游戏 / UI</span><span class="project-year">Unity · 2025</span></div>
+          <h3>2D 闯关小游戏</h3>
+          <p>基于 Unity 的 2D 横版闯关游戏，含关卡设计、UI 界面与角色动画。</p>
+        </div>
+      </a>
+
+      <!-- 项目 2: TownAdventure + LevelSequence (2张) -->
+      <a href="#" class="project-card reveal" data-category="motion"
+         data-gallery='["assets/work/TownAdventure.png","assets/work/LevelSequence.0047.png"]'
+         data-title="Town Adventure">
+        <div class="project-thumb">
+          <img src="assets/work/TownAdventure.png" alt="Town Adventure 主图">
+          <span class="series-count" style="top:14px;right:14px;">2 张</span>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">三维 / 场景</span><span class="project-year">UE5 · 2025</span></div>
+          <h3>Town Adventure</h3>
+          <p>UE5 搭建的小镇探索场景，Level Sequence 过场动画。</p>
+        </div>
+      </a>
+
+      <!-- 项目 3: 无法逃离 (3张) -->
+      <a href="#" class="project-card reveal" data-category="brand"
+         data-gallery='["assets/work/无法逃离1.png","assets/work/无法逃离2.png","assets/work/无法逃离3.png"]'
+         data-title="无法逃离">
+        <div class="project-thumb">
+          <img src="assets/work/无法逃离1.png" alt="无法逃离 主图">
+          <span class="series-count" style="top:14px;right:14px;">3 张</span>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">品牌 / 平面</span><span class="project-year">2024</span></div>
+          <h3>无法逃离</h3>
+          <p>系列平面设计作品，共 3 幅成组发布。</p>
+        </div>
+      </a>
+
+      <!-- 项目 4: 樊楼 -->
+      <a href="#" class="project-card reveal" data-category="brand"
+         data-gallery='["assets/work/樊楼.png"]'
+         data-title="樊楼">
+        <div class="project-thumb">
+          <img src="assets/work/樊楼.png" alt="樊楼">
+          <span class="series-count" style="top:14px;right:14px;">1 张</span>
+        </div>
         <div class="project-info">
           <div class="project-tags"><span class="project-tag">品牌视觉</span><span class="project-year">2024</span></div>
-          <h3>茶叙 · 品牌视觉系统</h3>
-          <p>四川职业技能大赛三等奖作品，为新式茶饮品牌设计的完整 VI 系统。</p>
+          <h3>樊楼</h3>
+          <p>品牌视觉 / 平面设计作品。</p>
         </div>
       </a>
 
-      <a href="https://www.zcool.com.cn" target="_blank" class="project-card reveal" data-category="motion">
-        <div class="project-thumb"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=700&q=80" alt="动态海报"></div>
+      <!-- 项目 5: 特效 -->
+      <a href="#" class="project-card reveal" data-category="motion"
+         data-gallery='["assets/work/特效.png"]'
+         data-title="特效">
+        <div class="project-thumb">
+          <img src="assets/work/特效.png" alt="特效">
+          <span class="series-count" style="top:14px;right:14px;">1 张</span>
+        </div>
         <div class="project-info">
-          <div class="project-tags"><span class="project-tag">动态 / 三维</span><span class="project-year">2025</span></div>
-          <h3>城市脉搏 · 动态海报</h3>
-          <p>华迪杯三等奖作品，AE + Blender 制作的城市主题动态海报。</p>
+          <div class="project-tags"><span class="project-tag">三维 / 动效</span><span class="project-year">2025</span></div>
+          <h3>特效</h3>
+          <p>动态特效设计 / 视觉效果作品。</p>
         </div>
       </a>
 
-      <a href="https://www.zcool.com.cn" target="_blank" class="project-card reveal" data-category="ui">
-        <div class="project-thumb"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80" alt="智慧停车APP"></div>
-        <div class="project-info">
-          <div class="project-tags"><span class="project-tag">UI / UX</span><span class="project-year">2024</span></div>
-          <h3>智慧停车 · APP UI 设计</h3>
-          <p>校园外包项目，为本地停车服务商设计的完整 APP UI 与交互原型。</p>
+      <!-- 项目 6: 网页设计 -->
+      <a href="#" class="project-card reveal" data-category="ui"
+         data-gallery='["assets/work/网页.jpg"]'
+         data-title="网页设计">
+        <div class="project-thumb">
+          <img src="assets/work/网页.jpg" alt="网页设计">
+          <span class="series-count" style="top:14px;right:14px;">1 张</span>
         </div>
-      </a>
-
-      <a href="https://www.zcool.com.cn" target="_blank" class="project-card reveal" data-category="poster">
-        <div class="project-thumb"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=700&q=80" alt="城市书店海报"></div>
         <div class="project-info">
-          <div class="project-tags"><span class="project-tag">平面海报</span><span class="project-year">2024</span></div>
-          <h3>城市书店 · 系列海报</h3>
-          <p>为独立书店设计的五张系列海报，主打阅读与城市情绪共鸣。</p>
-        </div>
-      </a>
-
-      <a href="https://www.zcool.com.cn" target="_blank" class="project-card reveal" data-category="brand">
-        <div class="project-thumb"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=80" alt="咖啡包装"></div>
-        <div class="project-info">
-          <div class="project-tags"><span class="project-tag">品牌视觉</span><span class="project-year">2025</span></div>
-          <h3>咖啡品牌 · 包装设计</h3>
-          <p>为小众精品咖啡品牌设计的整套包装与周边物料。</p>
-        </div>
-      </a>
-
-      <a href="https://www.zcool.com.cn" target="_blank" class="project-card reveal" data-category="ui">
-        <div class="project-thumb"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=700&q=80" alt="公益小程序"></div>
-        <div class="project-info">
-          <div class="project-tags"><span class="project-tag">UI / UX</span><span class="project-year">2025</span></div>
-          <h3>公益项目 · 小程序 UI</h3>
-          <p>为本地流浪动物救助站设计的领养小程序界面。</p>
+          <div class="project-tags"><span class="project-tag">网页 / UI</span><span class="project-year">2025</span></div>
+          <h3>网页设计</h3>
+          <p>网页界面 / UI 设计作品。</p>
         </div>
       </a>
 

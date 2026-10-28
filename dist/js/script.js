@@ -105,4 +105,91 @@
     el.style.transition = 'opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)';
     io.observe(el);
   });
+
+  // ============ Lightbox 画廊翻阅 ============
+  let lb = null, lbIndex = 0, lbImages = [], lbTitle = '';
+
+  function ensureLightbox() {
+    if (lb) return lb;
+    lb = document.createElement('div');
+    lb.className = 'lightbox';
+    lb.innerHTML = `
+      <span class="lightbox-close" aria-label="关闭">×</span>
+      <button class="lightbox-prev" aria-label="上一张">‹</button>
+      <button class="lightbox-next" aria-label="下一张">›</button>
+      <div class="lightbox-img-wrap"><img alt=""></div>
+      <div class="lightbox-thumb-row"></div>
+      <div class="lightbox-info">
+        <div class="lightbox-title"></div>
+        <div class="lightbox-counter"></div>
+      </div>
+    `;
+    document.body.appendChild(lb);
+
+    lb.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    lb.querySelector('.lightbox-prev').addEventListener('click', () => navLightbox(-1));
+    lb.querySelector('.lightbox-next').addEventListener('click', () => navLightbox(1));
+    lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+    return lb;
+  }
+
+  function openLightbox(images, startIndex, title) {
+    lbImages = images;
+    lbIndex = startIndex || 0;
+    lbTitle = title || '';
+    ensureLightbox();
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    renderLightbox();
+  }
+
+  function closeLightbox() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function navLightbox(dir) {
+    lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+    renderLightbox();
+  }
+
+  function renderLightbox() {
+    const img = lb.querySelector('.lightbox-img-wrap img');
+    img.src = lbImages[lbIndex];
+    img.style.animation = 'none';
+    img.offsetHeight; // reflow
+    img.style.animation = '';
+    lb.querySelector('.lightbox-title').textContent = lbTitle;
+    lb.querySelector('.lightbox-counter').textContent = `${lbIndex + 1} / ${lbImages.length}`;
+    lb.querySelector('.lightbox-prev').style.opacity = lbIndex === 0 ? '0.2' : '1';
+    lb.querySelector('.lightbox-next').style.opacity = lbIndex === lbImages.length - 1 ? '0.2' : '1';
+
+    const row = lb.querySelector('.lightbox-thumb-row');
+    row.innerHTML = '';
+    lbImages.forEach((src, i) => {
+      const t = document.createElement('img');
+      t.src = src;
+      t.alt = '';
+      if (i === lbIndex) t.classList.add('active');
+      t.addEventListener('click', () => { lbIndex = i; renderLightbox(); });
+      row.appendChild(t);
+    });
+  }
+
+  document.addEventListener('keydown', e => {
+    if (!lb || !lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    else if (e.key === 'ArrowLeft') navLightbox(-1);
+    else if (e.key === 'ArrowRight') navLightbox(1);
+  });
+
+  // 绑定项目卡点击
+  document.querySelectorAll('[data-gallery]').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      const images = JSON.parse(el.dataset.gallery);
+      const title = el.dataset.title || '';
+      openLightbox(images, 0, title);
+    });
+  });
 })();

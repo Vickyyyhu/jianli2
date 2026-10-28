@@ -708,6 +708,145 @@ h3 {
   background-repeat: no-repeat;
 }
 
+/* ============== Project Thumb 统一裁切 ============== */
+.project-thumb img, .blog-thumb img, .hero-right-img img,
+.bento-item img, .featured-img img, .skill-card img, .adv-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ============== Series Gallery Indicator ============== */
+.series-count {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.6);
+  color: var(--white);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 5;
+  backdrop-filter: blur(6px);
+}
+
+/* ============== Lightbox ============== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 40px;
+}
+.lightbox.open { opacity: 1; pointer-events: auto; }
+.lightbox-img-wrap {
+  max-width: 90vw;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-img-wrap img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  animation: zoomIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+  font-size: 28px;
+  line-height: 44px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  backdrop-filter: blur(6px);
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.3); transform: rotate(90deg); }
+.lightbox-prev, .lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+  font-size: 28px;
+  cursor: pointer;
+  transition: var(--transition);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+}
+.lightbox-prev { left: 32px; }
+.lightbox-next { right: 32px; }
+.lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,0.3); transform: translateY(-50%) scale(1.1); }
+.lightbox-prev:disabled, .lightbox-next:disabled { opacity: 0.2; cursor: not-allowed; }
+.lightbox-info {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: var(--white);
+}
+.lightbox-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.lightbox-counter {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 2px;
+}
+.lightbox-thumb-row {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 6px;
+  max-width: 80vw;
+}
+.lightbox-thumb-row img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+.lightbox-thumb-row img.active { opacity: 1; border-color: var(--accent-peach); box-shadow: 0 0 0 2px rgba(255,154,158,0.5); }
+.lightbox-thumb-row img:hover:not(.active) { opacity: 0.85; }
+
 /* ============== Responsive ============== */
 @media (max-width: 1024px) {
   .bento-grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 160px; }
